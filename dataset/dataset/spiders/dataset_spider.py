@@ -16,6 +16,6 @@ class DatasetSpider(CrawlSpider):
         dataset = DatasetItem()
         dataset['url'] = response.url
         dataset['name'] = sel.xpath("//div[@class='span-6']/article/div[@class='module'][1]/section[@class='module-content indent-large'][1]/h1").extract()
-        dataset['frequency'] = sel.xpath("//div[@class='span-2']/aside[@class='secondary']/div[@class='module-related'][2]/ul[1]/li[@class='margin-bottom-medium']").extract()
+        dataset['frequency'] = sel.xpath("//div[@class='span-2']/aside[@class='secondary']/div[@class='module-related'][2]/ul[1]/li[@class='margin-bottom-medium']/text()").extract()
 
         return dataset
