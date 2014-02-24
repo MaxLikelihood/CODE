@@ -38,3 +38,6 @@ nosetests.xml
 # PyCharm Project files
 ./idea
 
+# Scrapy files
+.cfg
+
