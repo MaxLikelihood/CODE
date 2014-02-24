@@ -18,7 +18,7 @@ class DatasetSpider(CrawlSpider):
                   'parse_dataset')]
 
     def parse_dataset(self, response):
-        p = re.compile('(((((\\(?[A-Za-z]{1}[-A-Za-z]+\\)?)|[-0-9]+)|-)|\\([A-Za-z0-9]+\\)) *)+')
+        p = re.compile('(((((\\(?[A-Za-z]{1}[-A-Za-z]+\\)?)|[-0-9]+)|-)|\\(?[A-Za-z0-9]+\\)?) *)+')
 
         sel = Selector(response)
         dataset = items.DatasetItem()
