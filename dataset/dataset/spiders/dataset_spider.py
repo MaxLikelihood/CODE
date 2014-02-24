@@ -6,7 +6,7 @@ import re
 
 class DatasetSpider(CrawlSpider):
 
-    pages = 1
+    pages = 9466
     name = 'dataset'
     allowed_domains = ['data.gc.ca']
     start_urls = []
