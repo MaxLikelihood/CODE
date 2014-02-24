@@ -14,4 +14,5 @@ class DatasetSpider(CrawlSpider):
     def parse_dataset(self, response):
         sel = Selector(response)
         dataset = DatasetItem()
+        dataset['url'] = response.url
         
