@@ -5,6 +5,6 @@ from scrapy.selector import Selector
 class DatasetSpider(CrawlSpider):
 
     name = 'dataset'
-    allowed_domains = ['data.gc.ca']
+    allowed_domains = ['data.gc.ca/data/en']
     start_urls = ['http://data.gc.ca/data/en/dataset?page=1']
 
