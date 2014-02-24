@@ -2,10 +2,11 @@ from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.selector import Selector
 from .. import items
+import re
 
 class DatasetSpider(CrawlSpider):
 
-    pages = 9466
+    pages = 1
     name = 'dataset'
     allowed_domains = ['data.gc.ca']
     start_urls = []
@@ -17,10 +18,12 @@ class DatasetSpider(CrawlSpider):
                   'parse_dataset')]
 
     def parse_dataset(self, response):
+        p = re.compile('(((([A-Z]{1}[-A-Za-z]+)|-)|\\([A-Za-z0-9]\\)) *)+')
+
         sel = Selector(response)
         dataset = items.DatasetItem()
         dataset['url'] = response.url
-        dataset['name'] = sel.xpath("//div[@class='span-6']/article/div[@class='module'][1]/section[@class='module-content indent-large'][1]/h1/text()").extract()
+        dataset['name'] = p.search(sel.xpath("//div[@class='span-6']/article/div[@class='module'][1]/section[@class='module-content indent-large'][1]/h1/text()").extract()[0].encode('ascii', 'ignore')).group()
         dataset['frequency'] = sel.xpath("//div[@class='span-2']/aside[@class='secondary']/div[@class='module-related'][2]/ul[1]/li[@class='margin-bottom-medium']/text()").re('[A-Z]{1}[a-z]+')[0].encode('ascii','ignore')
 
         return dataset
