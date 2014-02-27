@@ -7,6 +7,8 @@ Dependency
 ====
 [scrapy][3]
 
+[IPython][7]
+
 scrapy Item Model
 ====
 `url` Dataset URL
@@ -41,3 +43,4 @@ Sample JSON Output
 [4]: http://python.org/ "Python"
 [5]: http://data.gc.ca/data/en/dataset?q=&sort=title_string+asc&page=1 "Dataset Page 1"
 [6]: http://data.gc.ca/data/en/dataset?q=&sort=title_string+asc&page=18934 "Dataset Page 18934"
+[7]: http://ipython.org/ "IPython.org"
