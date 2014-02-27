@@ -17,7 +17,7 @@ scrapy Item Model
 
 scrapy Spider Task
 ====
-Visit all available datasets, starting from [page 1][5] to [page 9466][6], and scrape `Dataset Title`, `Dataset URL`, and `Dataset Maintain and Update Frequency` into Item attribute `name`, `url`, and `frequency` respectively. 
+Visit all available datasets, starting from [page 1][5] to [page 18934][6], and scrape `Dataset Title`, `Dataset URL`, and `Dataset Maintain and Update Frequency` into Item attribute `name`, `url`, and `frequency` respectively. 
 
 Store scraped data
 ====
@@ -39,5 +39,5 @@ Sample JSON Output
 [2]: http://data.gc.ca/eng/showcase "Canada Open Data"
 [3]: http://scrapy.org/ "scrapy"
 [4]: http://python.org/ "Python"
-[5]: http://data.gc.ca/data/en/dataset?page=1 "Dataset Page 1"
-[6]: http://data.gc.ca/data/en/dataset?page=9446 "Dataset Page 9446"
+[5]: http://data.gc.ca/data/en/dataset?q=&sort=title_string+asc&page=1 "Dataset Page 1"
+[6]: http://data.gc.ca/data/en/dataset?q=&sort=title_string+asc&page=18934 "Dataset Page 18934"
