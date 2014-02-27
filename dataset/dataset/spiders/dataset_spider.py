@@ -24,8 +24,12 @@ class DatasetSpider(CrawlSpider):
         dataset = items.DatasetItem()
         dataset['url'] = response.url
         dataset['name'] = p.search(sel.xpath("//div[@class='span-6']/article/div[@class='module'][1]/section[@class='module-content indent-large'][1]/h1/text()").extract()[0].encode('ascii', 'ignore')).group()
+        if dataset['name'] is None:
+            dataset['name'] = 'Title Regex Matching Unsuccessful'
 
         p = re.compile('([A-Z]{1}[a-z]+ *)+')
         dataset['frequency'] = p.search(sel.xpath("//div[@class='span-2']/aside[@class='secondary']/div[@class='module-related'][2]/ul[1]/li[@class='margin-bottom-medium']/text()").extract()[0].encode('ascii','ignore')).group()
+        if dataset['frequency'] is None:
+            dataset['frequency'] = 'Frequency Regex Matching Unsuccessful'
 
         return dataset
