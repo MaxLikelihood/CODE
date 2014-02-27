@@ -6,13 +6,13 @@ import re
 
 class DatasetSpider(CrawlSpider):
 
-    pages = 9466
+    pages = 18934
     name = 'dataset'
     allowed_domains = ['data.gc.ca']
     start_urls = []
 
     for i in range(1, pages + 1):
-        start_urls.append('http://data.gc.ca/data/en/dataset?page=' + str(i))
+        start_urls.append('http://data.gc.ca/data/en/dataset?q=&sort=title_string+asc&page=' + str(i))
 
     rules = [Rule(SgmlLinkExtractor(allow=['/dataset/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}']),
                   'parse_dataset')]
