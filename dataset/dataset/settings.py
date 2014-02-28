@@ -24,5 +24,7 @@ AUTOTHROTTLE_MAX_DELAY = 2.0
 
 CONCURRENT_REQUESTS_PER_DOMAIN = 10
 
+LOG_LEVEL = 'INFO'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'dataset (+http://www.yourdomain.com)'
