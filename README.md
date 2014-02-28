@@ -25,9 +25,9 @@ Store scraped data
 ====
 In scrapy project directory, execute
 
-`scrapy crawl dataset -o dataset_items.json -t json`
+`scrapy crawl dataset`
 
-will dump the data into `dataset_items.json` JSON file.
+will dump the data into `file` in JSON file format.
 
 View
 ====
