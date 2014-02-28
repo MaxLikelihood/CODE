@@ -27,7 +27,7 @@ In scrapy project directory, execute
 
 `scrapy crawl dataset -o dataset_item.json`
 
-will dump the data into `file` in JSON file format.
+will dump the data into `dataset_item` in JSON file format.
 
 View
 ====
