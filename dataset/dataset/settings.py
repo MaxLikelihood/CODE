@@ -22,5 +22,7 @@ AUTOTHROTTLE_ENABLED = True
 AUTOTHROTTLE_START_DELAY = 1.0
 AUTOTHROTTLE_MAX_DELAY = 2.0
 
+CONCURRENT_REQUESTS_PER_DOMAIN = 10
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'dataset (+http://www.yourdomain.com)'
