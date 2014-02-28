@@ -15,5 +15,8 @@ ITEM_PIPELINES = {
     'dataset.pipelines.DatasetPipeline': 100,
 }
 
+FEED_URI = 'file'
+FEED_FORMAT = 'jsonlines'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'dataset (+http://www.yourdomain.com)'
