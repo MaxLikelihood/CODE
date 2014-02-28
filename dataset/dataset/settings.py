@@ -11,5 +11,9 @@ BOT_NAME = 'dataset'
 SPIDER_MODULES = ['dataset.spiders']
 NEWSPIDER_MODULE = 'dataset.spiders'
 
+ITEM_PIPELINES = {
+    'dataset.pipelines.DatasetPipeline': 100,
+}
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'dataset (+http://www.yourdomain.com)'
