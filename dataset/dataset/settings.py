@@ -18,5 +18,9 @@ ITEM_PIPELINES = {
 FEED_URI = 'file'
 FEED_FORMAT = 'jsonlines'
 
+AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_START_DELAY = 1.0
+AUTOTHROTTLE_MAX_DELAY = 2.0
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'dataset (+http://www.yourdomain.com)'
